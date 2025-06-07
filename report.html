@@ -5,9 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Докладване | Пожарна безопасност</title>
   <link rel="stylesheet" href="css/report.css" />
+  <link rel="stylesheet" href="css/FireMap.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4H86n54x+S8R1j1z7/v4zP6o4S1t0r1S/e0qF0t7Q="
+     crossorigin=""/>
 </head>
 <body>
-  <header>
+   <header>
     <nav>
       <ul class="navbar">
         <li><a href="beginning.html">Начало</a></li>
@@ -15,7 +19,9 @@
         <li><a href="vehicles.html">Пожарни коли</a></li>
         <li><a href="fire-extinguishers.html">Пожарогасители</a></li>
         <li><a href="teams.html">Екипи</a></li>
+        <li><a href="report.html">Докладване</a></li>
         <li><a href="contact.html">Контакти</a></li>
+        <li><a href="firemap.html">Пожарна Карта</a></li>
       </ul>
     </nav>
   </header>
@@ -43,5 +49,11 @@
   <footer>
     <p>&copy; 2025 Пожарна безопасност</p>
   </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+    <script src="JS/FireMap.js"></script>
+    
 </body>
 </html>
