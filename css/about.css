@@ -1,17 +1,4 @@
 
-main h1 {
-  font-size: 2rem;
-  color: #d32f2f;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-main p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 15px;
-  text-align: justify;
-}
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
