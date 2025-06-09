@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Пожарна карта</title>
+    <title>Пожарна карта | Пожарна безопасност</title>
     <link rel="stylesheet" href="css/firemap.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
      crossorigin=""/>
-     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
 
 </head>
@@ -31,7 +31,7 @@
     <section id="firemap-section" class="map-page">
         <div class="container">
             <h1>Карта на активни пожари</h1>
-            <p class="disclaimer">Тази карта показва приблизителни локации на активни пожари и пожарни станции. Информацията може да не е актуална в реално време.</p>
+            <p class="disclaimer">Тази карта показва приблизителни локации на активни пожари, пожарни станции и пътни произшествия. Информацията може да не е актуална в реално време.</p>
 
             <div class="map-filters">
                 <h3>Филтриране на картата:</h3>
@@ -44,6 +44,9 @@
                 <label>
                     <input type="checkbox" id="filterFireStations" checked> Пожарни Станции
                 </label>
+                <label>
+                    <input type="checkbox" id="filterCarCrashes" checked> Пътни Произшествия
+                </label>
             </div>
 
             <div id="map"></div>
@@ -51,7 +54,8 @@
     </section>
 
     <section>
-        <div class="container"> <div class="map-legend">
+        <div class="container">
+            <div class="map-legend">
                 <h1>Легенда на Картата</h1>
                 <div class="map-legend-item">
                     <img src="DESIGN/icons8-flag-100 (1).png" alt="Активен пожар">
@@ -64,6 +68,10 @@
                 <div class="map-legend-item">
                     <img src="DESIGN/icons8-fire-station-100.png" alt="Пожарна станция">
                     <span>Пожарна станция</span>
+                </div>
+                <div class="map-legend-item">
+                    <img src="DESIGN/icons8-car-crash-100.png" alt="Пътно Произшествие">
+                    <span>Пътно Произшествие</span>
                 </div>
             </div>
         </div>
@@ -78,7 +86,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
      crossorigin=""></script>
-     <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
     <script src="JS/firemap.js"></script>
 </body>
 </html>
