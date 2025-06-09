@@ -1,6 +1,8 @@
 <div style="text-align: center;">
   <h1>🔥 Hello, we are <code>ByteForge</code> 🔥</h1>
-  
+  <p style="text-align: center;">
+ <img src="DESIGN/byteforge_logo.png" alt="ByteForge" width="300">
+</p>
 </div>
 
 ## 📝 Project Description
