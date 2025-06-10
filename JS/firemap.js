@@ -49,9 +49,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const fireIncidentsClusterGroup = L.markerClusterGroup();
         const carCrashesClusterGroup = L.markerClusterGroup();
 
-        // Helper function to add a small random offset
+        
         function getRandomOffset(coordinate) {
-            const offsetRange = 0.0005; // Adjust this value to control the spread
+            const offsetRange = 0.0005; 
             return coordinate + (Math.random() * offsetRange * 2) - offsetRange;
         }
 
@@ -80,7 +80,6 @@ document.addEventListener('DOMContentLoaded', function() {
             { lat: 43.1800, lng: 27.9000, description: "Пожар в магазин - център Варна", status: "active" },
             { lat: 42.4980, lng: 27.4700, description: "Пожар в контейнер - Център Бургас", status: "active" },
             { lat: 42.5800, lng: 27.4200, description: "Сухи треви - край Атанасовско езеро", status: "extinguished" },
-            { lat: 42.5000, lng: 27.5000, description: "Пожар в жилищна сграда - Славейков", status: "active" },
             { lat: 43.0800, lng: 25.6200, description: "Сухи треви - около Велико Търново", status: "extinguished" },
             { lat: 43.0900, lng: 25.6300, description: "Отпадъци - Западна зона", status: "extinguished" },
             { lat: 43.1500, lng: 25.5000, description: "Пожар в склад - Горна Оряховица", status: "active" },
@@ -109,7 +108,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         mockFireIncidents.forEach(fire => {
             let popupStatusText;
-            // Apply random offset to coordinates
             const lat = getRandomOffset(fire.lat);
             const lng = getRandomOffset(fire.lng);
             const marker = L.marker([lat, lng]);
@@ -148,12 +146,10 @@ document.addEventListener('DOMContentLoaded', function() {
             { lat: 42.6860, lng: 23.2750, description: "Пожарна служба - Люлин, София" },
             { lat: 42.1600, lng: 24.7800, description: "Пожарна служба - Източен, Пловдив" },
             { lat: 43.2000, lng: 27.9000, description: "Пожарна служба - Аспарухово, Варна" },
-            { lat: 42.5300, lng: 27.4800, description: "Пожарна служба - Изгрев, Бургас" },
             { lat: 43.1000, lng: 25.6500, description: "Пожарна служба - Търново (север)" }
         ];
 
         mockFireDepartments.forEach(department => {
-            // Apply random offset to coordinates
             const lat = getRandomOffset(department.lat);
             const lng = getRandomOffset(department.lng);
             const marker = L.marker([lat, lng], { icon: fireDepartmentIcon })
@@ -167,8 +163,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const mockCarCrashes = [
             { lat: 42.4980, lng: 27.4700, description: "Лек инцидент - кръстовище ул. Индустриална, Бургас", time: "14:30" },
             { lat: 42.5150, lng: 27.4500, description: "Катастрофа - път за Слънчев бряг, Бургас", time: "16:00" },
-            { lat: 42.4800, lng: 27.4000, description: "Пътно произшествие - ж.к. Меден Рудник, Бургас", time: "10:00" },
-            { lat: 42.5080, lng: 27.4850, description: "Инцидент с камион - изход за Айтос, Бургас", time: "08:15" },
             { lat: 42.6970, lng: 23.3220, description: "Верижна катастрофа - бул. Витоша, София", time: "17:45" },
             { lat: 42.7050, lng: 23.2800, description: "Сблъсък - околовръстен път, София", time: "18:00" },
             { lat: 42.6500, lng: 23.3500, description: "ПТП - бул. Цариградско шосе, София", time: "15:20" },
@@ -183,7 +177,6 @@ document.addEventListener('DOMContentLoaded', function() {
         ];
 
         mockCarCrashes.forEach(crash => {
-            // Apply random offset to coordinates
             const lat = getRandomOffset(crash.lat);
             const lng = getRandomOffset(crash.lng);
             const marker = L.marker([lat, lng], { icon: carCrashIcon })
