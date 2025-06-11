@@ -1,52 +1,41 @@
 <!DOCTYPE html>
 <html lang="bg">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Докладване | Пожарна безопасност</title>
-  <link rel="stylesheet" href="css/report.css" />
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Докладване | Пожарна безопасност</title>
+    <link rel="stylesheet" href="css/report.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 </head>
 <body>
-   <header>
-    <nav>
-      <ul class="navbar">
-        <li><a href="beginning.html">Начало</a></li>
-        <li><a href="about.html">За нас</a></li>
-        <li><a href="vehicles.html">Пожарни коли</a></li>
-        <li><a href="fire-extinguishers.html">Пожарогасители</a></li>
-        <li><a href="teams.html">Екипи</a></li>
-        <li><a href="report.html">Докладване</a></li>
-        <li><a href="contact.html">Контакти</a></li>
-        <li><a href="firemap.html">Пожарна Карта</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        </header>
 
-  <main>
-    <h1>Докладване на произшествие</h1>
-    <form>
-      <label for="location">Местоположение:</label><br>
-      <input type="text" id="location" name="location"><br><br>
+    <main>
+        <h1>Докладване на произшествие</h1>
+        <form>
+            <label for="location">Местоположение:</label><br>
+            <input type="text" id="location" name="location" readonly placeholder="Изберете място на картата"><br><br>
 
-      <label for="type">Тип на произшествието:</label><br>
-      <select id="type" name="type">
-        <option value="пожар">Пожар</option>
-        <option value="пътно">Пътно произшествие</option>
-        <option value="друго">Друго</option>
-      </select><br><br>
+            <div id="map"></div> <label for="type">Тип на произшествието:</label><br>
+            <select id="type" name="type">
+                <option value="пожар">Пожар</option>
+                <option value="пътно">Пътно произшествие</option>
+                <option value="друго">Друго</option>
+            </select><br><br>
 
-      <label for="message">Допълнителна информация:</label><br>
-      <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+            <label for="message">Допълнителна информация:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
 
-      <button type="submit">Изпрати</button>
-    </form>
-  </main>
+            <button type="submit">Изпрати</button>
+        </form>
+    </main>
 
-  <footer>
-    <p>&copy; 2025 Пожарна безопасност</p>
-  </footer>
+    <footer>
+        <p>&copy; 2025 Пожарна безопасност</p>
+    </footer>
 
-    
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="JS/locationmap.js"></script>
 </body>
 </html>
