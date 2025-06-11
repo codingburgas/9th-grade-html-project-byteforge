@@ -41,5 +41,4 @@ document.addEventListener('DOMContentLoaded', () => {
         
         marker.bindPopup(`Избрано местоположение: ${formattedCoords}`).openPopup();
     });
-
 });
